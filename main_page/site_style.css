@@ -1,0 +1,30 @@
+
+.mainpagecontent {
+	margin: 0 auto;
+	padding: 0 1rem;
+	max-width: 60rem;
+  }
+.menu {
+	width: 25%;
+	float: left;
+  }
+.siteheader {
+    align-items: center;
+	padding: 2rem;
+  }
+.sitefooter {
+    margin-top: 8rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    background: rgb(100, 100, 100);
+    color: white;
+  }
+img {
+	width: 100%;
+	height: auto;
+  }
+h1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 3rem;
+}
