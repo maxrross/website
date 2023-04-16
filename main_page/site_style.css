@@ -4,16 +4,24 @@
 	padding: 0 1rem;
 	max-width: 60rem;
   }
-.menu {
-	width: 25%;
-	float: left;
-  }
 .siteheader {
   align-items: center;
 	padding: 3rem;
   background-color: rgb(200, 200, 200);
   color: black
   }
+.siteheader a {
+  padding-right: 5rem;
+}
+.logo {
+  width: 5%;
+  height: auto;
+  padding: 1rem;
+}
+.logo img {
+  width: 5%;
+  height: auto;
+}
 .sitefooter {
     margin-top: 8rem;
     padding: 2rem;
@@ -31,15 +39,14 @@
 }
 */
 .toplayout {
+  position: relative;
+  width: 100%;
+  height: auto;
   background-image: url("Images/buckyball-4.png");
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: right bottom;
   background-attachment: scroll;
-  padding-top: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 30rem;
-  padding-left: 40rem;
-  /*figure out how to show entire background image*/
+  padding-block: 16rem;
 }
 .toplayout h2 {
   background-color: rgb(100, 100, 100);
@@ -53,6 +60,21 @@
   background-color: rgb(100, 100, 100);
   color: rgb(255, 255, 255);
 }
+.topleft {
+  width: 30%;
+  height: auto;
+  position: absolute;
+  top: 1rem;
+  left: 0rem;
+}
+.topright {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  top: 1rem;
+  right: 10rem;
+}
+
 img {
 	width: 100%;
 	height: auto;
