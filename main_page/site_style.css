@@ -4,24 +4,40 @@
 	padding: 0 1rem;
 	max-width: 60rem;
   }
+
 .siteheader {
-  align-items: center;
+  /*align-items: center;*/
 	padding: 3rem;
   background-color: rgb(200, 200, 200);
-  color: black
+  text-decoration: none;
   }
-.siteheader a {
-  padding-right: 5rem;
-}
-.logo {
+.siteheader.logo {
   width: 5%;
   height: auto;
+  padding: 0rem;
+}
+.siteheader.logo img {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 5%;
+  height: auto;
+}
+.siteheader ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(150, 200, 200);
+}
+.siteheader li {
+  float: right;
+}
+.siteheader li a {
+  display: block;
+  text-align: center;
   padding: 1rem;
 }
-.logo img {
-  width: 5%;
-  height: auto;
-}
+
 .sitefooter {
     margin-top: 8rem;
     padding: 2rem;
