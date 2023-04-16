@@ -5,6 +5,13 @@
 	max-width: 60rem;
   }
 
+.searchpagecontent {
+  margin: 0 auto;
+	padding: 0 1rem;
+	width: 100%;
+  height: auto;
+}
+
 .siteheader {
   /*align-items: center;*/
 	padding: 3rem;
@@ -98,4 +105,18 @@ img {
 h1 {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 3rem;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th {
+  background-color: rgb(100, 100, 100);
+  color: rgb(255, 255, 255);
+}
+table {
+  padding: 2rem;
+}
+tr:nth-child(even) {
+  background-color: rgb(200, 200, 200);
 }

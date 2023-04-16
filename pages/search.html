@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search - Liu Group AIDAM Database</title>
+    <link rel="stylesheet" href="site_style.css">
+    <script type="module" src="search_page.js" ></script>
+  </head>
+  <body>
+    <header class="siteheader">
+      <div>
+        <!--Change Menu to CSS-->
+        <span class="siteheader logo">
+          <img src="Images/C60_logo.png" alt="Liu Group Logo">
+          <br>
+          <br>
+          <a href="index.html">Liu Group AIDAM Database</a>
+        </span>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="search_page/search.html">SEARCH</a></li>
+          <li><a href="news.html">NEWS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </div>
+    </header>
+    <main class="searchpagecontent">
+      <h1>Search for a molecule:</h1> 
+      <!--moved table to js file for autofill and accessed using class-->
+      <!--table should be in js but need to figure out how to connect it; something with document.queryselector isn't working-->
+      <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>HOMO</th>
+            <th>LUMO</th>
+            <th>GAP</th>
+            <th>NPROC</th>
+            <th>Electronic Energy</th>
+            <th>Dipole</th>
+            <th>Time</th>
+            <th>Functional</th>
+            <th>Basis Sets</th>
+            <th>Total Charge</th>
+            <th>Spin Multiplicity</th>
+            <th>Opt XYZ</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+        </tr>
+        </table> 
+    </main>
+    <footer class="sitefooter">
+      <p>
+        Created by Liu Research Group at University of Florida
+        <hr>
+        <a href="https://liu.chem.ufl.edu/research/">Learn more about our research</a>
+      </p>
+    </footer>
+  </body>
+</html>

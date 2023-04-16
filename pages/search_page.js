@@ -1,3 +1,5 @@
+
+//class to create molecule objects that are listed in table on search page
 class SearchTableMolecule {
     constructor(
       id,
@@ -109,35 +111,56 @@ class SearchTableMolecule {
   }
 
 // FIXME create object for each molecule in database using SearchTableMolecule class
-  
 
+// test object not connected to MongoDB
+const test_molecule = new SearchTableMolecule("642ed736c63c3ccac8954cd0", "14mr_N2_1", "No Error", "2023-04-06",
+"10:28:10", -0.19396, -0.07194, 0.12202, 16, -2623.60829, "Array", "", "0:5:12:10.3", "0:0:21:6.9", "RB3LYP", "6-31G(d)"
+, 0, 1, "Array", "14mr_N2_1_6-31G(d)_RB3LYP");
+
+ 
 const main = document.querySelector(".searchpagecontent");
 
 // table filled in with molecule objects then run in search.html
 // FIXME fix table spacing in CSS
-const content = `
+// upload_date, upload_time, cup_time, elapsed_time, and identifier 
+// do not need to be shown on the webpage but would be useful for the database
+const table_content = `
     <table>
     <tr>
+        <th>ID</th>
         <th>Name</th>
+        <th>Status</th>
         <th>HOMO</th>
         <th>LUMO</th>
         <th>GAP</th>
         <th>NPROC</th>
         <th>Electronic Energy</th>
+        <th>Dipole</th>
+        <th>Time</th>
+        <th>Functional</th>
+        <th>Basis Sets</th>
         <th>Total Charge</th>
         <th>Spin Multiplicity</th>
+        <th>Opt XYZ</th>
     </tr>
     <tr>
-        <td>${molecule.name}</td>
-        <td>${molecule.HOMO}</td>
-        <td>${molecule.LUMO}</td>
-        <td>${molecule.GAP}</td>
-        <td>${molecule.NPROC}</td>
-        <td>${molecule.electronic_energy}</td>
-        <td>${total_charge}</td>
+        <td>${test_molecule.id}</td>
+        <td>${test_molecule.name}</td>
+        <td>${test_molecule.status}</td>
+        <td>${test_molecule.HOMO}</td>
+        <td>${test_molecule.LUMO}</td>
+        <td>${test_molecule.GAP}</td>
+        <td>${test_molecule.NPROC}</td>
+        <td>${test_molecule.electronic_energy}</td>
+        <td>${test_molecule.dipole}</td>
+        <td>${test_molecule.time}</td>
+        <td>${test_molecule.functional}</td>
+        <td>${test_molecule.basis_sets}</td>
+        <td>${test_total_charge}</td>
         <td>${spin_multiplicity}</td>
-    </table>
-        
+        <td>${opt_xyz}</td>
+    </tr>
+    </table>  
 `;
 
-main.innerHTML = content;
+main.innerHTML = table_content;
