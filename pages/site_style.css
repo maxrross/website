@@ -4,13 +4,21 @@
 	padding: 0 1rem;
 	max-width: 60rem;
   }
-
+/*
 .searchpagecontent {
   margin: 0 auto;
 	padding: 0 1rem;
 	width: 100%;
   height: auto;
 }
+*/
+/*
+.searchpagecontent {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 60rem;
+}
+*/
 
 .siteheader {
   /*align-items: center;*/
