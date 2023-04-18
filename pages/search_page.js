@@ -190,9 +190,14 @@ const table_content = `
 
 //test to see if js is connected to html
 // const test_content = `<p>hello</p>`;
+// can combine `` variables, then send to html file
+// const test_content_two = `<h1>hi<h1>`;
+// var combined_content = test_content + test_content_two;
 
 //3. returns table_content inside <main> on search.html
 main.innerHTML = table_content;
+// main.innerHTML = combined_content;
+
 // to not completely replace main, use document.createElement("stuff");
 // add things
 // stuff.innerHTML = content;
