@@ -114,9 +114,27 @@ class SearchTableMolecule {
 
 
 // test object (not connected to MongoDB)
-const test_molecule = new SearchTableMolecule("642ed736c63c3ccac8954cd0", "14mr_N2_1", "No Error", "2023-04-06",
-"10:28:10", -0.19396, -0.07194, 0.12202, 16, -2623.60829, "Array", "", "0:5:12:10.3", "0:0:21:6.9", "RB3LYP", "6-31G(d)"
-, 0, 1, "Array", "14mr_N2_1_6-31G(d)_RB3LYP");
+const test_molecule = new SearchTableMolecule("642ed736c63c3ccac8954cd0", 
+"14mr_N2_1", 
+"No Error", 
+"2023-04-06",
+"10:28:10", 
+-0.19396, 
+-0.07194, 
+0.12202, 
+16, 
+-2623.60829, 
+"Array", 
+"", 
+"0:5:12:10.3", 
+"0:0:21:6.9", 
+"RB3LYP", 
+"6-31G(d)", 
+0, 
+1, 
+"Array", 
+"14mr_N2_1_6-31G(d)_RB3LYP"
+);
 
 
  // Fills in <main> content in search.html with table_content to connect js to html
@@ -125,7 +143,7 @@ const test_molecule = new SearchTableMolecule("642ed736c63c3ccac8954cd0", "14mr_
 
  //1. finds main by class=searchpagecontent in search.html
 // const main = document.querySelector(".searchpagecontent");
-var main = document.getElementsByClassName("searchpagecontent")
+const main = document.querySelector(".searchpagecontent");
 
 //2. writes in object properties in table_content
 // table filled in with molecule objects then run in search.html
@@ -169,9 +187,13 @@ const table_content = `
         </tr>
     </table>  
 `;
+
 //test to see if js is connected to html
-const test_content = `
-<p>hello</p>`
+// const test_content = `<p>hello</p>`;
 
 //3. returns table_content inside <main> on search.html
-main.innerHTML = test_content;
+main.innerHTML = table_content;
+// to not completely replace main, use document.createElement("stuff");
+// add things
+// stuff.innerHTML = content;
+// main.append(stuff);
