@@ -102,7 +102,7 @@
   padding-block: 16rem;
 }
 .toplayout h2 {
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(145, 145, 145);
   padding-top: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
@@ -110,7 +110,7 @@
   color: rgb(255, 255, 255);
 }
 .toplayout p {
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(145, 145, 145);
   color: rgb(255, 255, 255);
 }
 .topleft {
@@ -141,7 +141,7 @@ table, th, td {
   border-collapse: collapse;
 }
 th {
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(145, 145, 145);
   color: rgb(255, 255, 255);
 }
 table {
