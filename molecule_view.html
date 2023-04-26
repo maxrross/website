@@ -2,15 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liu Group AIDAM Database</title>
-    <link rel="stylesheet" href="site_style.css">
-    <script type="text/javascript" src="jsmol/JSmol.min.js"></script>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+    <title>JSmol Tutorial</title>
+    <!--<link rel="stylesheet" href="site_style.css">-->
+    <!--<script type="text/javascript" src="jsmol/JSmol.min.js"></script>-->
+    <script src="/Jmol-16.1.11-binary/jmol-16.1.11/jsmol/jsmol/JSmol.min.js"></script>
+    <script src="/Jmol-16.1.11-binary/jmol-16.1.11/jsmol/jsmol/js/Jmol2.js"></script>
+    <script> jmolInitialize("/Jmol-16.1.11-binary/jmol-16.1.11/jsmol/jsmol");</script>
   </head>
+
   <body>
-    <script type="text/javascript">jmolInitialize("jsmol/JSmol.min.js")</script>
+    <!--<script type="text/javascript">jmolInitialize("jsmol/JSmol.min.js")</script>-->
     <main>
         <p>Molecule structures visualized with JSmol: an open-source HTML5 viewer for chemical structures in 3D. http://wiki.jmol.org/index.php/JSmol</p>
+        <p>Here is a protein:</p>
+        <script>
+            jmolApplet(400, "load 1aho.pdb", "0");
+        </script> <!--arguments: size of window, file to load, applet window number (if you put another
+        window, number it "1")-->
+        <!--look at Jmol documentation to find out what files Jmol accepts and is able to understand, then use
+        that type for the molecules you want to visualize-->
 
     </main>
   </body>
