@@ -22,27 +22,39 @@
 
 .siteheader {
   /*align-items: center;*/
-	padding: 3rem;
-  background-color: rgb(200, 200, 200);
+	padding: 4rem;
+  background-color: rgb(141, 167, 196);
   text-decoration: none;
   }
 .siteheader.logo {
-  width: 5%;
+  /*width: 5%;*/
   height: auto;
   padding: 0rem;
 }
 .siteheader.logo img {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
-  width: 5%;
+  top: 1rem;
+  left: 1rem;
+  width: 15rem;
   height: auto;
 }
 .siteheader ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: rgb(150, 200, 200);
+  /*background-color: rgb(150, 200, 200);*/
+}
+.siteheader a:link {
+  color: rgb(255, 255, 255);
+}
+.siteheader a:hover {
+  color: rgb(52, 137, 235);
+}
+.siteheader a:active {
+  color: rgb(0, 0, 0);
+}
+.siteheader a:visited {
+  color: rgb(255, 255, 255);
 }
 .siteheader li {
   float: right;
@@ -51,6 +63,7 @@
   display: block;
   text-align: center;
   padding: 1rem;
+  padding-right: 8rem;
 }
 
 .sitefooter {
@@ -58,9 +71,18 @@
     padding: 2rem;
     display: flex;
     justify-content: center;
-    background: rgb(100, 100, 100);
+    background: rgb(141, 167, 196);
     color: white;
   }
+.sitefooter a:link {
+  color: rgb(255, 255, 255);
+}
+.sitefooter a:hover {
+  color: rgb(52, 137, 235);
+}
+.sitefooter a:visited {
+  color: rgb(255, 255, 255);
+}
 /*
 #secondtopimage {
   position: absolute;
