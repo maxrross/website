@@ -24,19 +24,24 @@
 .siteheader {
   background-color: rgb(141, 167, 196);
   text-decoration: none;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .siteheader.logo img {
-  width: 24%;
+  width: 20%;
   position: absolute;
-  top: 1rem;
-  left: 1rem;
   height: auto;
+  background-color: blueviolet;
 }
 .siteheader ul{
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  /*background-color: rgb(150, 200, 200);*/
+  padding-top: 5%;
+  padding-bottom: 1%;
+  float: right;
+  width: 70%;
 }
 .siteheader a:link {
   color: rgb(255, 255, 255);
@@ -51,8 +56,9 @@
   color: rgb(255, 255, 255);
 }
 .siteheader li {
-  float: right;
-  width: 19%
+  /*float: right;*/
+  display: inline-block;
+  padding-left: 15%;
 }
 
 .sitefooter {
