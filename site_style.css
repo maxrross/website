@@ -1,8 +1,9 @@
 
 .mainpagecontent {
-	margin: 0 auto;
 	padding: 0 1rem;
-	max-width: 60rem;
+	max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   }
 /*
 .searchpagecontent {
@@ -32,6 +33,7 @@
   padding: 0rem;
 }
 .siteheader.logo img {
+  width: 24%;
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -58,13 +60,16 @@
 }
 .siteheader li {
   float: right;
+  width: 19%
 }
+/*
 .siteheader li a {
   display: block;
   text-align: center;
   padding: 1rem;
   padding-right: 8rem;
 }
+*/
 
 .sitefooter {
     margin-top: 8rem;
@@ -94,12 +99,12 @@
 .toplayout {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
   background-image: url("Images/buckyball-4.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-attachment: scroll;
-  padding-block: 16rem;
+  padding-block: 17.5rem;
 }
 .toplayout h2 {
   background-color: rgb(145, 145, 145);
@@ -113,25 +118,35 @@
   background-color: rgb(145, 145, 145);
   color: rgb(255, 255, 255);
 }
-.topleft {
-  width: 30%;
-  height: auto;
+.topleft img {
+  width: 35%;
+  height: 100%;
   position: absolute;
-  top: 1rem;
+  top: 0rem;
   left: 0rem;
 }
 .topright {
-  width: 50%;
+  width: 60%;
   height: auto;
   position: absolute;
   top: 1rem;
-  right: 10rem;
+  right: 1rem;
+  
 }
 
+.searchpagecontent {
+  padding: 0 1rem;
+	max-width: 90%;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*
 img {
 	width: 100%;
 	height: auto;
   }
+  */
 h1 {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 3rem;
