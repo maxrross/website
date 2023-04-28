@@ -22,22 +22,14 @@
 */
 
 .siteheader {
-  /*align-items: center;*/
-	padding: 4rem;
   background-color: rgb(141, 167, 196);
   text-decoration: none;
-  }
-.siteheader.logo {
-  /*width: 5%;*/
-  height: auto;
-  padding: 0rem;
 }
 .siteheader.logo img {
   width: 24%;
   position: absolute;
   top: 1rem;
   left: 1rem;
-  width: 15rem;
   height: auto;
 }
 .siteheader ul{
@@ -62,14 +54,6 @@
   float: right;
   width: 19%
 }
-/*
-.siteheader li a {
-  display: block;
-  text-align: center;
-  padding: 1rem;
-  padding-right: 8rem;
-}
-*/
 
 .sitefooter {
     margin-top: 8rem;
