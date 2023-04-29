@@ -21,6 +21,7 @@
 }
 */
 
+/* HEADER */
 .siteheader {
   background-color: rgb(141, 167, 196);
   text-decoration: none;
@@ -61,6 +62,7 @@
   padding-left: 15%;
 }
 
+/*FOOTER*/
 .sitefooter {
     margin-top: 8rem;
     padding: 2rem;
@@ -86,6 +88,8 @@
   z-index: -1; /* use z index to get text on top of image
 }
 */
+
+/*INDEX.HTML TWO IMAGES AND PARAGRAPH*/
 .toplayout {
   position: relative;
   width: 100%;
@@ -124,6 +128,7 @@
   
 }
 
+/*SEARCH PAGE*/
 .searchpagecontent {
   padding: 0 1rem;
 	max-width: 90%;
@@ -131,16 +136,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-/*
-img {
-	width: 100%;
-	height: auto;
-  }
-  */
-h1 {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 3rem;
-}
+
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
@@ -154,4 +150,20 @@ table {
 }
 tr:nth-child(even) {
   background-color: rgb(200, 200, 200);
+}
+
+/*OTHER ELEMENTS*/
+/*
+img {
+	width: 100%;
+	height: auto;
+  }
+  */
+h1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 3rem;
+}
+
+body {
+  margin: 0;
 }
