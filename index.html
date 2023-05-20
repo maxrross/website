@@ -9,6 +9,7 @@
     <script type="module" src="main_page.js" ></script>
   </head>
   <body class="body">
+    <!--Header and Navigation-->
     <header class="siteheader">
       <div>
         <span class="siteheader logo">
@@ -24,7 +25,6 @@
       <br>
     </header>
       <main>
-        <!--class="mainpagecontent" for main_page.js-->
         <div class="toplayout">
           <div class="topleft">
             <img src="Images/graph_graphic.png" alt="Graphs representing data">
@@ -45,6 +45,21 @@
           <!--<a href="jmol-16.1.11\jsmol\jsmol.htm">Test JSmol</a>-->
         </p>
         <!--<p>paragraph with more info...</p>-->
+        
+        <!-- Content sections -->
+    <div >
+      <table>
+        <tr>
+          <td>
+            <div id="plot1" style="width: 30%;"></div>
+          </td>
+          <td>
+            <div  id="plot2" style="width: 50%;"></div>
+          </td>          
+        </tr>
+      </table>
+    </div>
+    <div id="plot3"></div>
       </main>
       <footer class="sitefooter">
         <p>

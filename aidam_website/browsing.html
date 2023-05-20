@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Molecule Search</title>
+  </head>
+  <body>
+    <h1>Molecule Search</h1>
+    <form>
+      <label>
+        Keyword:
+        <input type="text" name="keyword" required />
+      </label>
+      <br />
+      <label>
+        Filter:
+        <select name="filter" required>
+          <option value="name">Name</option>
+          <option value="stoichiometry">Stoichiometry</option>
+          <option value="date">Date</option>
+          <option value="smith">Smith</option>
+        </select>
+      </label>
+      <br />
+      <button type="submit">Search</button>
+    </form>
+    <hr />
+    <div id="result"></div>
+    <script>
+      const form = document.querySelector("form");
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const response = await fetch("/search", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            keyword: formData.get("keyword"),
+            filter: formData.get("filter"),
+          }),
+        });
+        const molecule = await response.json();
+        const resultDiv = document.querySelector("#result");
+        resultDiv.innerHTML = "";
+        if (molecule) {
+          for (const [key, value] of Object.entries(molecule)) {
+            const row = document.createElement("div");
+            const keyElem = document.createElement("span");
+            keyElem.textContent = key + ": ";
+            const valueElem = document.createElement("span");
+            valueElem.textContent = value;
+            row.appendChild(keyElem);
+            row.appendChild(valueElem);
+            resultDiv.appendChild(row);
+          }
+        } else {
+          resultDiv.textContent = "No results found.";
+        }
+      });
+    </script>
+  </body>
+</html>
