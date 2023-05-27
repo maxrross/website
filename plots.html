@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AIDAM</title>
+    <link rel="stylesheet" href="site_style.css" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="python_scripts/umap.js"></script>
+    <header>
+      <h1>AIDAM INTERNAL HUB</h1>
+    </header>
+  </head>
+  <body>
+    <!-- Navigation menu -->
+    <ul>
+      <li><a href="index.html">Summary</a></li>
+      <li><a href="search.html">Browsing</a></li>
+      <li><a href="plots.html">Statistics</a></li>
+    </ul>
+    <div class="umap">
+      <div id="umap"></div>
+    </div>
+    <script>
+      const x = umap_x.slice(0);
+      const y = umap_y.slice(0);
+      const label = umap_label.slice(0);
+      const carbon = carbon_num.slice(0);
+      var ht = [];
+      for (let i = 0; i < label.length; i++) {
+        ht.push(label[i] + "<br>" + carbon[i]);
+      }
+
+      var trace = {
+        x,
+        y,
+        mode: "markers",
+        type: "scatter",
+        marker: { size: 1, color: carbon },
+        hovertext: ht,
+      };
+
+      var layout = {
+        xaxis: {
+          autorange: true,
+          showgrid: false,
+          zeroline: false,
+          showline: false,
+          autotick: true,
+          ticks: "",
+          showticklabels: false,
+        },
+        yaxis: {
+          autorange: true,
+          showgrid: false,
+          zeroline: false,
+          showline: false,
+          autotick: true,
+          ticks: "",
+          showticklabels: false,
+        },
+        plot_bgcolor: "black",
+        margin: { t: 30, r: 0, b: 0, l: 0 },
+        title: "UMAP OF ALL DATA",
+        autosize: true,
+        height: 800,
+        style: {
+          borderRadius: "100px",
+        },
+      };
+
+      var data = [trace];
+
+      Plotly.newPlot("umap", data, layout);
+    </script>
+  </body>
+</html>
