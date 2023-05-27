@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .mainpagecontent {
   padding: 0 1rem;
   max-width: 90%;
