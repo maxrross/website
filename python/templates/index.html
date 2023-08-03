@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- your existing head content goes here -->
+</head>
+<body class="body">
+    <header class="siteheader">
+        <!-- your existing header content goes here -->
+    </header>
+    <main>
+        <p>
+            For news, visit Professor Mingjie Liu's <a href="https://liu.chem.ufl.edu/">website</a>.
+        </p>
+        <form action="/run_script" method="post">
+            <label for="structure">Choose structure:</label>
+            <select name="structure" id="structure">
+                <option value="1">Zigzag</option>
+                <option value="2">Armchair</option>
+                <option value="3">Square</option>
+            </select><br>
+
+            <label for="size">Enter size:</label>
+            <input type="text" name="size" id="size" required><br>
+
+            <label for="vacancies">Enter number of vacancies:</label>
+            <input type="text" name="vacancies" id="vacancies" required><br>
+
+            <label for="pores_allowed">Are pores allowed?</label>
+            <select name="pores_allowed" id="pores_allowed">
+                <option value="y">Yes</option>
+                <option value="n">No</option>
+            </select><br>
+        
+            <label for="output_structures">Output structures?</label>
+            <select name="output_structures" id="output_structures">
+                <option value="y">Yes</option>
+                <option value="n">No</option>
+            </select><br>
+        
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer class="sitefooter">
+        <!-- your existing footer content goes here -->
+    </footer>
+</body>
+</html>

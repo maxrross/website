@@ -1,0 +1,15 @@
+# Software License
+
+* Perity Business Software Distribution
+
+* Copyright (c) 2020 Perity
+
+* @copyright Copyright (c) 2020 Perity (https://perity.site/copyright/)
+
+* @license PERITY
+
+* The Softwares are not in open source and maintained by Perity Team.
+
+* Users are not allowed to decompile the software or distribute their keys for usage.
+
+* We always maintain CSR (Corporate Social Responsibility). So if any non-profit organization need help of our software then we can generate speacial keys for usage (Organization must prove their non-profit category and also have to show contribution to world).

@@ -1,0 +1,4 @@
+Flask==2.3.2
+numpy==1.25.2
+tqdm==4.65.0
+NPC==1.351 # Replace "NPC" with the actual version of the "non-periodic carbon" package, if available on PyPI.

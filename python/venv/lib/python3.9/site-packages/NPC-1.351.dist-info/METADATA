@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: NPC
+Version: 1.351
+Summary: Parallel Processing in Network Devices
+Home-page: https://ntp.perity.site
+Author: Dipnarayan Das
+Author-email: dipnarayan.das35@gmail.com
+License: License.txt
+Platform: UNKNOWN
+Requires-Dist: netifaces
+
+
+
+# Introduction
+
+NTP is a new parallel threading model which work in **network level**. Here two types of process work.
+
+1. Communication
+2. Execution
+
+Here communication start using local parallel thread but the execution happens in network devices.
+
+NPC is Network Processor Client to interface with Network Processor.
+Network Processor can be run using Virtual Machine [Tested in Oracle Virtual Box]. Download the Netowork Processor from https://ntp.perity.site/NTP.ova
+
+# Usage
+
+    import NPC
+
+    NPC.register(ip, file_path) # ip = Machine IP Address, file_path = path to token.txt
+
+    NPC.findServers() # Find for execution servers
+
+    NPC.ntpExec(program,ip,timeout) # program = Code Written in Python, ip = Machine IP Address, timeout = Integer value in seconds
+
+    NPC.fileTransfer(ip, file_path) # ip = Machine IP Address, file_path = path to your file
+
+
+# Tutorial
+
+https://ntp.perity.site/
+
+# Pricing
+
+https://ntp.perity.site/
+
+# FAQ
+
+https://ntp.perity.site/
+
+# License
+
+www.perity.site/slicense
+
+
+
