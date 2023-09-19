@@ -1,47 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- your existing head content goes here -->
-</head>
-<body class="body">
-    <header class="siteheader">
-        <!-- your existing header content goes here -->
-    </header>
-    <main>
-        <p>
-            For news, visit Professor Mingjie Liu's <a href="https://liu.chem.ufl.edu/">website</a>.
-        </p>
-        <form action="/run_script" method="post">
-            <label for="structure">Choose structure:</label>
-            <select name="structure" id="structure">
-                <option value="1">Zigzag</option>
-                <option value="2">Armchair</option>
-                <option value="3">Square</option>
-            </select><br>
+  <head>
+    <!-- Include Tailwind CSS CDN link or use your local setup here -->
+    <link href="../styles.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <div class="flex sm:flex-row p-4 gap-4 max-w-2xl mx-auto flex-col">
+    <div class="container w-fit border border-green-500 p-2">
+      <form action="/run_script" method="post">
+        <label for="structure" class="block font-medium">Type</label>
+        <select
+          name="structure"
+          id="structure"
+          class="mt-1 w-full rounded border border-gray-300 px-3 py-2"
+        >
+          <option value="1">Zigzag</option>
+          <option value="2">Armchair</option>
+          <option value="3">Square</option>
+        </select>
 
-            <label for="size">Enter size:</label>
-            <input type="text" name="size" id="size" required><br>
+        <label for="size" class="mt-4 block font-medium">Size</label>
+        <input
+          type="text"
+          name="size"
+          id="size"
+          required
+          class="mt-1 w-full rounded border border-gray-300 px-3 py-2"
+        />
 
-            <label for="vacancies">Enter number of vacancies:</label>
-            <input type="text" name="vacancies" id="vacancies" required><br>
+        <div class="mt-4 flex flex-row items-center justify-center gap-x-2">
+          <label class="block font-medium">With H?</label>
 
-            <label for="pores_allowed">Are pores allowed?</label>
-            <select name="pores_allowed" id="pores_allowed">
-                <option value="y">Yes</option>
-                <option value="n">No</option>
-            </select><br>
-        
-            <label for="output_structures">Output structures?</label>
-            <select name="output_structures" id="output_structures">
-                <option value="y">Yes</option>
-                <option value="n">No</option>
-            </select><br>
-        
-            <button type="submit">Submit</button>
-        </form>
-    </main>
-    <footer class="sitefooter">
-        <!-- your existing footer content goes here -->
-    </footer>
-</body>
+          <input
+            type="checkbox"
+            name="pores_allowed"
+            id="pores_allowed"
+            value="yes"
+            class="form-checkbox h-5 w-5"
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="mt-4 flex w-full justify-center rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+        >
+          Generate
+        </button>
+      </form>
+    </div>
+    <div class="border flex flex-col border-red-200 w-72 max-w-xs h-48">
+      <h1 class="bg-red-200 flex justify-center">SA design (M-Xₙ)</h1>
+      <div class="p-4">
+        <div class="flex flex-row items-center">
+          <label for="M" class="block font-medium pr-2">M</label>
+          <select
+            name="M"
+            id="M"
+            class="rounded border border-gray-300 px-3 py-2"
+          >
+            <option value="Fe">Fe</option>
+            <option value="Co">Co</option>
+            <option value="Ni">Ni</option>
+            <option value="Cu">Cu</option>
+            <option value="Zn">Zn</option>
+          </select>
+        </div>
+        <div class="flex flex-row items-center">
+          <label for="X" class="blockfont-medium pr-3">X</label>
+          <select
+            name="X"
+            id="X"
+            class="mt-1 rounded border border-gray-300 px-3 py-2"
+          >
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="N">N</option>
+            <option value="O">O</option>
+          </select>
+        </div>
+        <div class="flex flex-row mx-auto items-center">
+          <label for="n" class="block font-medium pr-3">n</label>
+          <select
+            name="n"
+            id="n"
+            class="mt-1 rounded border border-gray-300 px-3 py-2"
+          >
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col w-48">
+      <div class="border flex flex-col border-slate-400 h-36">
+        <h1 class="bg-slate-400 flex justify-center">Defect</h1>
+        <div class="p-4">
+          <div class="flex flex-row items-center">
+            <label for="M" class="block font-medium pr-2">Type</label>
+            <select
+              name="M"
+              id="M"
+              class="rounded border border-gray-300 px-3 py-2"
+            >
+              <option value="Fe">Fe</option>
+              <option value="Co">Co</option>
+              <option value="Ni">Ni</option>
+              <option value="Cu">Cu</option>
+              <option value="Zn">Zn</option>
+            </select>
+          </div>
+          <div class="flex flex-row items-center">
+            <label for="X" class="block font-medium pr-2">Num</label>
+            <select
+              name="X"
+              id="X"
+              class="mt-1 rounded border border-gray-300 px-3 py-2"
+            >
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="N">N</option>
+              <option value="O">O</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="border flex flex-col border-slate-400 w-full">
+        <h1 class="bg-slate-400 flex justify-center">Dopant</h1>
+        <div class="p-4">
+          <div class="flex flex-row items-center">
+            <select
+              name="M"
+              id="M"
+              class="rounded border border-gray-300 px-3 py-2 placeholder-shown:border-gray-500 w-full"
+            >
+              <option value="Co">Co</option>
+              <option value="Ni">Ni</option>
+              <option value="Cu">Cu</option>
+              <option value="Zn">Zn</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border flex flex-col border-green-300 w-56 h-32">
+      <h1 class="bg-green-300 flex justify-center px-1">Functional Groups</h1>
+      <div class="p-4">
+        <div class="flex flex-row items-center">
+          <select
+            name="M"
+            id="M"
+            class="rounded border border-gray-300 px-3 py-2 placeholder-shown:border-gray-500"
+          >
+            <option value="Co">Co</option>
+            <option value="Ni">Ni</option>
+            <option value="Cu">Cu</option>
+            <option value="Zn">Zn</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-xl mx-auto flex flex-col sm:flex-row items-center">
+    <div class="border flex flex-col border-green-300 w-fit m-4">
+      <h1 class="bg-green-300 flex justify-center px-1">Molecular Structure</h1>
+      <div class="ml-1 h-24 w-24">Loading...</div>
+    </div>
+    <div class="grid grid-flow-col border border-black">
+      <div class="grid grid-cols-5 border border-gray-300">
+        <div class="p-2 border-r border-b border-gray-300">ID</div>
+        <div class="p-2 border-r border-b border-gray-300">Predicted EF</div>
+        <div class="p-2 border-r border-b border-gray-300">
+          Predicted HOMO-LUMO
+        </div>
+        <div class="p-2 border-r border-b border-gray-300">
+          Predicted charge on metal
+        </div>
+        <div class="p-2 border-b border-gray-300">Export</div>
+
+        <div class="p-2 border-r border-b border-gray-300"></div>
+        <div class="p-2 border-r border-b border-gray-300"></div>
+        <div class="p-2 border-r border-b border-gray-300"></div>
+        <div class="p-2 border-r border-b border-gray-300"></div>
+        <div class="p-2 border-b border-gray-300">
+          <input type="checkbox" class="form-checkbox h-5 w-5 mx-auto" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col text-lg justify-center items-center gap-2">
+    Total Configuration
+    <div class="border text-xl mx-auto border-black w-fit rounded-lg px-4 py-2">
+      11,230
+    </div>
+    <button class="bg-gray-200 rounded-lg p-2 border-gray-400 border-2">
+      Upload to DB
+    </button>
+  </div>
 </html>
