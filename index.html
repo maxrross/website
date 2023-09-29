@@ -4,73 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Liu Group AIDAM Database</title>
-    <link rel="icon" type="image/png" href="./Images/C60_logo_circle.png">
-    <link rel="stylesheet" href="dist/output.css">
-    <script type="module" src="main_page.js" ></script>
-    <script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script>
+    <link rel="icon" type="image/png" href="./Images/C60_logo_circle.png" />
+    <link rel="stylesheet" href="dist/output.css" />
+    <script type="module" src="header.js"></script>
+    <script type="module" src="footer.js"></script>
+    <script type="module" src="main_page.js"></script>
+    <script
+      src="https://cdn.plot.ly/plotly-2.20.0.min.js"
+      charset="utf-8"
+    ></script>
     <script src="onload.js" charset="utf-8"></script>
   </head>
   <body class="body">
-    
     <!--Header and Navigation-->
-    <header class="siteheader">
-      <div>
-        <span class="siteheader logo">
-          <a href="index.html"><img src="Images/header_logo.png" alt="Liu Group Logo"></a>
-        </span>
-        <ul>
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="search.html">SEARCH</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="news.html">NEWS</a></li>
-        </ul>
-      </div>
-      <br>
-    </header>
-      <main>
-        <div class="toplayout">
-          <div class="topleft">
-            <img src="Images/graph_graphic.png" alt="Graphs representing data">
-            <!--"Search Database" button-->
-          </div>
-          <div class="topright">
-            <h2>Liu Group AIDAM Database</h2>
-            <p>The Liu Group from the University of Florida has created a database
-              to provide information about materials, their properties, and their
-              connections with other materials.
-            </p>
-          </div>
+    <header class="headercontent siteheader"></header>
+    <main>
+      <div class="toplayout">
+        <div class="topleft">
+          <img src="Images/graph_graphic.png" alt="Graphs representing data" />
+          <!--"Search Database" button-->
         </div>
-        <h1 class="">More Information</h1>
-        <p>
-          <a href="molecule_view.html">Sample 3Dmol page</a>
-          <br>
-          <!--<a href="jmol-16.1.11\jsmol\jsmol.htm">Test JSmol</a>-->
-        </p>
-        <!--<p>paragraph with more info...</p>-->
-        
-        <!-- Content sections -->
-    <div >
-      <table>
-        <tr>
-          <td>
-            <div id="plot1" style="width: 30%;"></div>
-          </td>
-          <td>
-            <div  id="plot2" style="width: 50%;"></div>
-          </td>          
-        </tr>
-      </table>
-    </div>
-    
-    <div id="plot3"></div>
-      </main>
-      <footer class="sitefooter" style=" bottom: 0; width: 100%;">
-        <p>
-          Created by Liu Research Group at University of Florida
-          <hr>
-          <a href="https://liu.chem.ufl.edu/research/">Learn more about our research</a>
-        </p>
-      </footer>
+        <div class="topright">
+          <h2>Liu Group AIDAM Database</h2>
+          <p>
+            The Liu Group from the University of Florida has created a database
+            to provide information about materials, their properties, and their
+            connections with other materials.
+          </p>
+        </div>
+      </div>
+      <h1 class="">More Information</h1>
+      <p>
+        <a href="molecule_view.html">Sample 3Dmol page</a>
+        <br />
+        <!--<a href="jmol-16.1.11\jsmol\jsmol.htm">Test JSmol</a>-->
+      </p>
+      <!--<p>paragraph with more info...</p>-->
+
+      <!-- Content sections -->
+      <div>
+        <table>
+          <tr>
+            <td>
+              <div id="plot1" style="width: 30%"></div>
+            </td>
+            <td>
+              <div id="plot2" style="width: 50%"></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="plot3"></div>
+    </main>
+    <footer
+      class="footercontent sitefooter"
+      style="bottom: 0; width: 100%"
+    ></footer>
   </body>
 </html>
