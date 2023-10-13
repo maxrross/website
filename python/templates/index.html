@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Include Tailwind CSS CDN link or use your local setup here -->
     <link href="../styles.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <div class="flex sm:flex-row p-4 gap-4 max-w-2xl mx-auto flex-col">
     <div class="container w-fit border border-green-500 p-2">
       <form action="/run_script" method="post">
+
+        <!-- New dropdown to select block -->
+        <label for="block" class="block font-medium">Select Block</label>
+        <select name="block" id="block" class="mt-1 w-full rounded border border-gray-300 px-3 py-2">
+          <option value="block1">Block 1</option>
+          <option value="block2">Block 2</option>
+          <option value="block3">Block 3</option>
+        </select>
+
         <label for="structure" class="block font-medium">Type</label>
-        <select
-          name="structure"
-          id="structure"
-          class="mt-1 w-full rounded border border-gray-300 px-3 py-2"
-        >
+        <select name="structure" id="structure" class="mt-1 w-full rounded border border-gray-300 px-3 py-2">
           <option value="1">Zigzag</option>
           <option value="2">Armchair</option>
           <option value="3">Square</option>
         </select>
 
         <label for="size" class="mt-4 block font-medium">Size</label>
-        <input
-          type="text"
-          name="size"
-          id="size"
-          required
-          class="mt-1 w-full rounded border border-gray-300 px-3 py-2"
-        />
+        <input type="text" name="size" id="size" required class="mt-1 w-full rounded border border-gray-300 px-3 py-2" />
+
+        <!-- Fields for Block 2 and Block 3 -->
+        <label for="coordination_number" class="mt-4 block font-medium">Coordination Number</label>
+        <input type="text" name="coordination_number" id="coordination_number" class="mt-1 w-full rounded border border-gray-300 px-3 py-2" />
+
+        <label for="metal_type" class="mt-4 block font-medium">Metal Type</label>
+        <input type="text" name="metal_type" id="metal_type" class="mt-1 w-full rounded border border-gray-300 px-3 py-2" />
+
+        <label for="dopant_type" class="mt-4 block font-medium">Dopant Type</label>
+        <input type="text" name="dopant_type" id="dopant_type" class="mt-1 w-full rounded border border-gray-300 px-3 py-2" />
+
+        <label for="dopant_number" class="mt-4 block font-medium">Dopant Number</label>
+        <input type="text" name="dopant_number" id="dopant_number" class="mt-1 w-full rounded border border-gray-300 px-3 py-2" />
+
+        <label for="vacancy_type" class="mt-4 block font-medium">Vacancy Type</label>
+        <input type="text" name="vacancy_type" id="vacancy_type" class="mt-1 w-full rounded border border-gray-300 px-3 py-2" />
 
         <div class="mt-4 flex flex-row items-center justify-center gap-x-2">
           <label class="block font-medium">With H?</label>
-
-          <input
-            type="checkbox"
-            name="pores_allowed"
-            id="pores_allowed"
-            value="yes"
-            class="form-checkbox h-5 w-5"
-          />
+          <input type="checkbox" name="pores_allowed" id="pores_allowed" value="yes" class="form-checkbox h-5 w-5" />
         </div>
 
-        <button
-          type="submit"
-          class="mt-4 flex w-full justify-center rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
-        >
+        <button type="submit" class="mt-4 flex w-full justify-center rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
           Generate
         </button>
       </form>
