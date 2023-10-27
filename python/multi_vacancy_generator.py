@@ -13,7 +13,7 @@ structure = sys.argv[1]
 size = int(sys.argv[2])
 vnum = int(sys.argv[3])
 pores_allowed = sys.argv[4]
-output_structures = sys.argv[5]
+output_struclocktures = sys.argv[5]
 
 
 
