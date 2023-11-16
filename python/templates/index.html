@@ -1,205 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="../styles.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 600px; /* Adjust the max width as needed */
+        margin: 0 auto; /* Center the container horizontally */
+        padding: 20px;
+      }
+
+      form {
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      button[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="checkbox"]{
+        margin-bottom: 20px;
+      }
+
+      h1,
+      h2 {
+        font-size: 24px;
+        margin-top: 20px;
+      }
+
+      p {
+        font-style: italic;
+        color: #888;
+      }
+    </style>
+
+    <script>
+      function checkCoordinationNumber() {
+        let coordinationNumber = document.getElementById(
+          "coordination_number"
+        ).value;
+        let lastDopantBox = document.getElementById("dopant_type_4");
+        if (coordinationNumber === "4") {
+          lastDopantBox.disabled = false;
+        } else {
+          lastDopantBox.disabled = true;
+        }
+      }
+    </script>
   </head>
-  <div class="flex sm:flex-row p-4 gap-4 max-w-2xl mx-auto flex-col">
-    <div class="container w-fit border border-green-500 p-2">
-      <form action="/run_script" method="post">
-
-        <!-- New dropdown to select block -->
-        <label for="block" class="block font-medium">Select Block</label>
-        <select name="block" id="block" class="mt-1 w-full rounded border border-gray-300 px-3 py-2">
-          <option value="block1">Block 1</option>
-          <option value="block2">Block 2</option>
-          <option value="block3">Block 3</option>
-        </select>
-
-        <label for="structure" class="block font-medium">Type</label>
-        <select name="structure" id="structure" class="mt-1 w-full rounded border border-gray-300 px-3 py-2">
-          <option value="1">Zigzag</option>
-          <option value="2">Armchair</option>
-          <option value="3">Square</option>
-        </select>
-
-        <label for="size" class="mt-4 block font-medium">Size</label>
-        <input type="text" name="size" id="size" required class="mt-1 w-full rounded border border-gray-300 px-3 py-2" />
-
-        <!-- Fields for Block 2 and Block 3 -->
-        <label for="coordination_number" class="mt-4 block font-medium">Coordination Number</label>
-        <input type="text" name="coordination_number" id="coordination_number" class="mt-1 w-full rounded border border-gray-300 px-3 py-2" />
-
-        <label for="metal_type" class="mt-4 block font-medium">Metal Type</label>
-        <input type="text" name="metal_type" id="metal_type" class="mt-1 w-full rounded border border-gray-300 px-3 py-2" />
-
-        <label for="dopant_type" class="mt-4 block font-medium">Dopant Type</label>
-        <input type="text" name="dopant_type" id="dopant_type" class="mt-1 w-full rounded border border-gray-300 px-3 py-2" />
-
-        <label for="dopant_number" class="mt-4 block font-medium">Dopant Number</label>
-        <input type="text" name="dopant_number" id="dopant_number" class="mt-1 w-full rounded border border-gray-300 px-3 py-2" />
-
-        <label for="vacancy_type" class="mt-4 block font-medium">Vacancy Type</label>
-        <input type="text" name="vacancy_type" id="vacancy_type" class="mt-1 w-full rounded border border-gray-300 px-3 py-2" />
-
-        <div class="mt-4 flex flex-row items-center justify-center gap-x-2">
-          <label class="block font-medium">With H?</label>
-          <input type="checkbox" name="pores_allowed" id="pores_allowed" value="yes" class="form-checkbox h-5 w-5" />
-        </div>
-
-        <button type="submit" class="mt-4 flex w-full justify-center rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
-          Generate
-        </button>
-      </form>
-    </div>
-    <div class="border flex flex-col border-red-200 w-72 max-w-xs h-48">
-      <h1 class="bg-red-200 flex justify-center">SA design (M-Xₙ)</h1>
-      <div class="p-4">
-        <div class="flex flex-row items-center">
-          <label for="M" class="block font-medium pr-2">M</label>
-          <select
-            name="M"
-            id="M"
-            class="rounded border border-gray-300 px-3 py-2"
-          >
-            <option value="Fe">Fe</option>
-            <option value="Co">Co</option>
-            <option value="Ni">Ni</option>
-            <option value="Cu">Cu</option>
-            <option value="Zn">Zn</option>
+  <body>
+    <div class="container">
+      <div>
+        <h1>Block 1</h1>
+        <form action="/run_script" method="post">
+          <label for="structure">Type</label>
+          <select name="structure" id="structure">
+            <option value="zigzag">Zigzag</option>
+            <option value="armchair">Armchair</option>
+            <option value="square">Square</option>
           </select>
-        </div>
-        <div class="flex flex-row items-center">
-          <label for="X" class="blockfont-medium pr-3">X</label>
-          <select
-            name="X"
-            id="X"
-            class="mt-1 rounded border border-gray-300 px-3 py-2"
-          >
-            <option value="B">B</option>
-            <option value="C">C</option>
-            <option value="N">N</option>
-            <option value="O">O</option>
-          </select>
-        </div>
-        <div class="flex flex-row mx-auto items-center">
-          <label for="n" class="block font-medium pr-3">n</label>
-          <select
-            name="n"
-            id="n"
-            class="mt-1 rounded border border-gray-300 px-3 py-2"
-          >
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
-        </div>
+
+          <!-- Size Field for Block 1 -->
+          <div id="block1-fields">
+            <label for="size">Size</label>
+            <input type="text" name="size" id="size" required />
+          </div>
+
+          <div>
+            <label
+              >Add Hydrogen?
+              <input
+                type="checkbox"
+                name="pores_allowed"
+                id="pores_allowed"
+                value="yes"
+            /></label>
+          </div>
+          <button type="submit">Generate</button>
+        </form>
       </div>
-    </div>
-    <div class="flex flex-col w-48">
-      <div class="border flex flex-col border-slate-400 h-36">
-        <h1 class="bg-slate-400 flex justify-center">Defect</h1>
-        <div class="p-4">
-          <div class="flex flex-row items-center">
-            <label for="M" class="block font-medium pr-2">Type</label>
-            <select
-              name="M"
-              id="M"
-              class="rounded border border-gray-300 px-3 py-2"
-            >
+      <div>
+        <h1>Block 2</h1>
+        <form action="/run_script" method="post">
+          <input type="hidden" name="block" value="block2"> <!-- Add this hidden field -->
+          <!-- Fields for Block 2 -->
+          <div id="block2-fields">
+            <label for="metal_type">Metal Type</label>
+            <select name="metal_type" id="metal_type">
               <option value="Fe">Fe</option>
               <option value="Co">Co</option>
               <option value="Ni">Ni</option>
               <option value="Cu">Cu</option>
               <option value="Zn">Zn</option>
             </select>
-          </div>
-          <div class="flex flex-row items-center">
-            <label for="X" class="block font-medium pr-2">Num</label>
-            <select
-              name="X"
-              id="X"
-              class="mt-1 rounded border border-gray-300 px-3 py-2"
+            <label for="dopant_type"
+              >Dopant Type (comma separated, e.g., B,N)</label
             >
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="N">N</option>
-              <option value="O">O</option>
+            <input type="text" name="dopant_type" id="dopant_type" />
+
+            <label for="coordination_number">Coordination Number</label>
+            <select name="coordination_number" id="coordination_number">
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            <p>
+              Based on the coordination number, input up to 3 elements (e.g.,
+              B,N,O) for coordination number 3, and up to 4 for coordination
+              number 4.
+            </p>
+            <button type="submit">Generate</button>
+          </div>
+        </form>
+      </div>
+      <div>
+        <h1>Block 3</h1>
+        <form action="/run_script" method="post">
+          <input type="hidden" name="block" value="block3"> <!-- Add this hidden field -->
+          <!-- Fields for Block 3 -->
+          <div id="block3-fields">
+            <label for="defect_type">Defect Type</label>
+            <select name="defect_type" id="defect_type">
+              <option value="single">Single</option>
+              <option value="double">Double</option>
+              <option value="stone_wales">Stone wales</option>
             </select>
           </div>
-        </div>
-      </div>
-      <div class="border flex flex-col border-slate-400 w-full">
-        <h1 class="bg-slate-400 flex justify-center">Dopant</h1>
-        <div class="p-4">
-          <div class="flex flex-row items-center">
-            <select
-              name="M"
-              id="M"
-              class="rounded border border-gray-300 px-3 py-2 placeholder-shown:border-gray-500 w-full"
-            >
-              <option value="Co">Co</option>
-              <option value="Ni">Ni</option>
-              <option value="Cu">Cu</option>
-              <option value="Zn">Zn</option>
-            </select>
-          </div>
-        </div>
+          <button type="submit">Generate</button>
+        </form>
       </div>
     </div>
-    <div class="border flex flex-col border-green-300 w-56 h-32">
-      <h1 class="bg-green-300 flex justify-center px-1">Functional Groups</h1>
-      <div class="p-4">
-        <div class="flex flex-row items-center">
-          <select
-            name="M"
-            id="M"
-            class="rounded border border-gray-300 px-3 py-2 placeholder-shown:border-gray-500"
-          >
-            <option value="Co">Co</option>
-            <option value="Ni">Ni</option>
-            <option value="Cu">Cu</option>
-            <option value="Zn">Zn</option>
-          </select>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="max-w-xl mx-auto flex flex-col sm:flex-row items-center">
-    <div class="border flex flex-col border-green-300 w-fit m-4">
-      <h1 class="bg-green-300 flex justify-center px-1">Molecular Structure</h1>
-      <div class="ml-1 h-24 w-24">Loading...</div>
-    </div>
-    <div class="grid grid-flow-col border border-black">
-      <div class="grid grid-cols-5 border border-gray-300">
-        <div class="p-2 border-r border-b border-gray-300">ID</div>
-        <div class="p-2 border-r border-b border-gray-300">Predicted EF</div>
-        <div class="p-2 border-r border-b border-gray-300">
-          Predicted HOMO-LUMO
-        </div>
-        <div class="p-2 border-r border-b border-gray-300">
-          Predicted charge on metal
-        </div>
-        <div class="p-2 border-b border-gray-300">Export</div>
-
-        <div class="p-2 border-r border-b border-gray-300"></div>
-        <div class="p-2 border-r border-b border-gray-300"></div>
-        <div class="p-2 border-r border-b border-gray-300"></div>
-        <div class="p-2 border-r border-b border-gray-300"></div>
-        <div class="p-2 border-b border-gray-300">
-          <input type="checkbox" class="form-checkbox h-5 w-5 mx-auto" />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex flex-col text-lg justify-center items-center gap-2">
-    Total Configuration
-    <div class="border text-xl mx-auto border-black w-fit rounded-lg px-4 py-2">
-      11,230
-    </div>
-    <button class="bg-gray-200 rounded-lg p-2 border-gray-400 border-2">
-      Upload to DB
-    </button>
-  </div>
+  </body>
 </html>

@@ -14,3 +14,7 @@ deactivate
 node connect_to_db.js
 # Start frontend
 open index.html
+
+#using tailwind
+npx tailwindcss  -o ./dist/output.css --watch
+browser-sync start --server --files “**/*.*”
