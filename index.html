@@ -17,43 +17,141 @@
   </head>
   <body class="body">
     <!--Header and Navigation-->
-    <header class="headercontent siteheader"></header>
+    <header> <!--class="headercontent" put this class back when you replace this with js header-->
+      <div class="w-full bg-myGrey"> 
+
+        <div class="grid grid-cols-4 gap-4 justify-evenly">
+          <div><a href="index.html"><img src="Images/header_logo.png" alt="Liu Group Logo" class="h-auto md:h-16 lg:h-16 xl:h-16"></a></div>
+          <div class="col-span-3">
+            <div class="grid grid-cols-1 gap-1 justify-evenly">
+              <div class="h-2 sm:h-3 md:h-3 lg:h-2 xl:h-3"></div>
+              <div >
+                <ul class="list-none">
+                  <!--<li class="inline-block w-4/12"><a href="index.html"><img src="Images/header_logo.png" alt="Liu Group Logo" class="w-1/3"></a></li>-->
+                  <li class="inline-block w-1/4"><a href="index.html" class="text-myWhite text-base sm:text-lg sm:font-medium md:font-bold lg:text-xl lg:font-medium xl:text-xl">HOME</a></li> <!--w-2/12-->
+                  <li class="inline-block w-1/4"><a href="search.html" class="text-myWhite text-base sm:text-lg sm:font-medium md:font-bold lg:text-xl lg:font-medium xl:text-xl">TOOLS</a></li>
+                  <li class="inline-block w-1/4"><a href="about.html" class="text-myWhite text-base sm:text-lg sm:font-medium md:font-bold lg:text-xl lg:font-medium xl:text-xl">ABOUT</a></li>
+                  <li class="inline-block w-1/5"><a href="news.html" class="text-myWhite text-base sm:text-lg sm:font-medium md:font-bold lg:text-xl lg:font-medium xl:text-xl">NEWS</a></li>
+                </ul>
+              </div>
+              <div class="h-2 sm:h-3 md:h-3 lg:h-2 xl:h-2"></div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </header>
+
     <main>
+      <hr style="color: #FFFFFF;">
+      <section>
+        <div class="grid grid-cols-6 gap-4 bg-myLightGrey"> <!--bg-myLightGrey-->
+          <div class="col-span-6 bg-myLightGrey"></div>
+          <div class="col-span-2 bg-myGreen border-myGreen border-4 rounded-lg">
+            <div class="relative">
+              <img src="Images/graph_graphic_new.png" alt="Graph Graphic" class="h-64 md:h-[28rem] lg:h-[32rem] xl:h-[33.5rem] rounded-3xl">
+              <!--button source: Flowbite; access here: https://flowbite.com/docs/components/buttons/-->
+              <button type="button" class=" absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 text-myWhite bg-gradient-to-r from-myGold via-myVibrantGold to-myDarkGold hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-myVibrantGold dark:focus:ring-myDarkGold font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="search.html">SEARCH DATABASE</a></button>
+            </div>
+            
+          </div>
+          <div class="col-span-4 bg-myGreen border-myGreen border-4 rounded-lg">
+            <div class="relative">
+              <img src="Images/buckyball-4.png" alt="Bucky Ball" class="h-64 md:h-[28rem] lg:h-[32rem] xl:h-[33.5rem] rounded-3xl">
+              
+              <h1 id="turnRed" class="absolute text-2xl text-myWhite top-5 left-5 border-myWhite border-2 rounded-lg">AIDAM Database Visualization</h1>
+              <p id="turnRed1" class="absolute xl:text-xl text-xs text-myWhite top-16 left-5 border-myWhite border-2 xl:w-1/2 rounded-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maximus nulla sagittis lectus fringilla placerat. Nulla ultrices commodo ornare. Phasellus sit amet consequat turpis. Nam ac enim lectus. In eu sapien nec lectus pulvinar imperdiet eu ut massa. Quisque ut tempor ipsum. In sit amet magna eu massa varius egestas. Sed ullamcorper velit id hendrerit suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eget hendrerit tellus. Ut in orci ut diam iaculis consectetur nec ut felis. Praesent felis libero, laoreet ac tempus id, ullamcorper non arcu. Nullam venenatis mi eget nulla pharetra maximus malesuada in tellus.</p>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="grid grid-cols-6 bg-myLightGrey">
+            <!--<div class="is-seen peer"></div>-->
+            <div class="col-span-6"><img src="Images/hexagons_1.png" alt="Hexagons" class="w-full opacity-0" id="hex-fade"></div> <!--transition-opacity duration-1000 ease-out opacity-50 peer-[.is-seen]:opacity-100-->
+            <!--<div class="col-span-1 bg-myGold">04</div>-->
+          
+            <div class="col-span-6"><img src="Images/hexagons_2.png" alt="Hexagons" class="w-full opacity-0" id="hex-fade2"></div>
+            <!--<div class="col-span-2 bg-myGold">06</div>-->
+          
+            <div class="col-span-6"><img src="Images/hexagons_3.png" alt="Hexagons" class="w-full opacity-0" id="hex-fade3"></div>
+            <!--<div class="col-span-3 bg-myGold">08</div>-->
+          
+            <div class="col-span-6"><img src="Images/hexagons_4.png" alt="Hexagons" class="w-full opacity-0" id="hex-fade4"></div>
+            <!--<div class="col-span-4 bg-myGold">10</div>-->
+          
+            <div class="col-span-6"><img src="Images/hexagons_5.png" alt="Hexagons" class="w-full opacity-0" id="hex-fade5"></div>
+            <!--<div class="col-span-5 bg-myGold">12</div>-->
+          
+            <div class="col-span-6"><img src="Images/hexagons_6.png" alt="Hexagons" class="w-full opacity-0" id="hex-fade6"></div>
+          
+      </div>
+
+    
+    <div class="grid grid-cols-6 gap-4 bg-myLightGrey">
+        <div id="tool" class="col-span-5 bg-myLightGrey text-myWhite text-center font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl">VISUALIZE MOLECULES</div>
+        <div class="col-span-1 bg-myRed rounded-lg">15</div>
+        <div class="col-span-2 bg-myGold rounded-lg">16</div>
+        <div class="col-span-4 bg-myBlue rounded-lg"><p class="xl:text-2xl text-lg text-myWhite border-myWhite border-2 rounded-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maximus nulla sagittis lectus fringilla placerat. Nulla ultrices commodo ornare. Phasellus sit amet consequat turpis. Nam ac enim lectus. In eu sapien nec lectus pulvinar imperdiet eu ut massa. Quisque ut tempor ipsum. In sit amet magna eu massa varius egestas. Sed ullamcorper velit id hendrerit suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eget hendrerit tellus. Ut in orci ut diam iaculis consectetur nec ut felis. Praesent felis libero, laoreet ac tempus id, ullamcorper non arcu. Nullam venenatis mi eget nulla pharetra maximus malesuada in tellus.
+        </p></div>
+
+        <div id="tool2" class="col-span-5 bg-myLightGrey text-myWhite text-center font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl">GENERATE MOLECULES</div>
+        <div class="col-span-1 bg-myRed rounded-lg">19</div>
+        <div class="col-span-4 bg-myGreen rounded-lg"><p class="xl:text-2xl text-lg text-myWhite border-myWhite border-2 rounded-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maximus nulla sagittis lectus fringilla placerat. Nulla ultrices commodo ornare. Phasellus sit amet consequat turpis. Nam ac enim lectus. In eu sapien nec lectus pulvinar imperdiet eu ut massa. Quisque ut tempor ipsum. In sit amet magna eu massa varius egestas. Sed ullamcorper velit id hendrerit suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eget hendrerit tellus. Ut in orci ut diam iaculis consectetur nec ut felis. Praesent felis libero, laoreet ac tempus id, ullamcorper non arcu. Nullam venenatis mi eget nulla pharetra maximus malesuada in tellus.
+        </p></div>
+        <div class="col-span-2 bg-myGold rounded-lg">21</div>
+
+        <div id="tool3" class="col-span-5 bg-myLightGrey text-myWhite text-center font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl rounded-lg">SEARCH MOLECULES</div>
+        <div class="col-span-1 bg-myRed rounded-lg">23</div>
+        <div class="col-span-2 bg-myGold rounded-lg">16</div>
+        <div class="col-span-4 bg-myBlue rounded-lg"><p class="xl:text-2xl text-lg text-myWhite border-myWhite border-2 rounded-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maximus nulla sagittis lectus fringilla placerat. Nulla ultrices commodo ornare. Phasellus sit amet consequat turpis. Nam ac enim lectus. In eu sapien nec lectus pulvinar imperdiet eu ut massa. Quisque ut tempor ipsum. In sit amet magna eu massa varius egestas. Sed ullamcorper velit id hendrerit suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eget hendrerit tellus. Ut in orci ut diam iaculis consectetur nec ut felis. Praesent felis libero, laoreet ac tempus id, ullamcorper non arcu. Nullam venenatis mi eget nulla pharetra maximus malesuada in tellus.
+        </p></div>
+    </div>
+    
+      <!--
       <div class="toplayout">
         <div class="topleft">
           <img src="Images/graph_graphic.png" alt="Graphs representing data" />
-          <!--"Search Database" button-->
+          
         </div>
-        <h1 class="text-2xl bg-green-700">More Information</h1>
+        <h1 class="text-2xl bg-myGreen">More Information</h1>
         <p>
           <a href="molecule_view.html">Sample 3Dmol page</a>
           <br>
+        -->
           <!--<a href="jmol-16.1.11\jsmol\jsmol.htm">Test JSmol</a>-->
-        </p>
-        <!--<p>paragraph with more info...</p>-->
         
         <!-- Content sections -->
-    <div >
-      <table>
-        <tr>
-          <td>
-            <div id="plot1" style="width: 30%;"></div>
-          </td>
-          <td>
-            <div  id="plot2" style="width: 50%;"></div>
-          </td>          
-        </tr>
-      </table>
-    </div>
-    
-    <div id="plot3"></div>
+    <section>
+      <div class="bg-myLightGrey">
+        <br>
+        <table class="bg-myLightGrey">
+          <tr>
+            <td>
+              <div id="plot1" style="width: 30%;" class="bg-myLightGrey"></div>
+            </td>
+            <td>
+              <div  id="plot2" style="width: 50%;" class="bg-myLightGrey"></div>
+            </td>          
+          </tr>
+        </table>
+      </div>
+      
+      <div id="plot3" class="bg-myLightGrey"></div>
+      <!--<br class="bg-myLightGrey">-->
+    </section>
+
       </main>
-      <footer class="sitefooter" style=" bottom: 0; width: 100%;">
+      <footer class="bg-myGrey" style=" bottom: 0; width: 100%;">
         <p>
           Created by Liu Research Group at University of Florida
           <hr>
           <a href="https://liu.chem.ufl.edu/research/">Learn more about our research</a>
         </p>
       </footer>
+
   </body>
 </html>
